@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Studieassistent</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="app-wrapper">
+    <header>
+      <h1>AI Studieassistent</h1>
+      <p>Spør om et tema, få forklaring, sammendrag, flashcards og mini-quiz.</p>
+    </header>
+
+    <section id="chat" class="chat-window" aria-live="polite"></section>
+
+    <form id="chat-form" class="chat-form">
+      <textarea id="message" placeholder="Skriv spørsmål eller tema..." rows="3" required></textarea>
+      <button type="submit" id="send-btn">Send</button>
+    </form>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</body>
+</html>
